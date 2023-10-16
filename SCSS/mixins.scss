@@ -1,0 +1,27 @@
+//mixins @mixin name(var1,var2,...varN);  @include name(var1,var2,...varN)
+
+@mixin myFontStyle($fontColor: #faf, $fontSize: 18px) {
+    color:$fontColor;
+    font-size: $fontSize;
+    font-weight: 900;
+}
+
+@mixin myPadding($padd...) {
+    padding: $padd;
+}
+
+@mixin linkColor($link, $hover, $active, $visited) {
+    color: $link;
+
+    &:hover {
+        color: $hover;
+    }
+
+    &:active {
+        color: $active
+    }
+
+    &:visited {
+        color: $visited
+    }
+}

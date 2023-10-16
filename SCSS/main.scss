@@ -1,0 +1,54 @@
+@import "./mixins.scss";
+@import "./variables.scss";
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.block:not(.first) {
+    height: 200px;
+    width: $blockWidth;
+    margin-bottom: 20px;
+    color: rgb(66, 40, 40);
+    background: $bgColor;
+    border: $border;
+}
+
+#central-block {
+    padding: 30px;
+    
+    ul {
+        list-style: armenian;
+        display: inline-block;
+        
+        li {
+            color: $listItemsColor; 
+        }
+    }
+    
+}
+
+.first {
+    background: $bgColor;
+    height: 300px;
+    margin-bottom: 20px;
+    color: $firstBlockColor;
+    border: $border;
+}
+
+.second {
+    padding: 20px;
+    .block__first-paragraph {
+        @include myFontStyle(#000);
+        @include myPadding(4px 10px 40px 20px);
+    }
+    
+    .block__second-paragraph {
+        @include myFontStyle(#faf, 20px);
+        font-weight: 100;
+    }
+}
+a {
+        @include linkColor(black,red ,purple ,green );
+}
